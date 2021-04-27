@@ -1,6 +1,6 @@
 codecov:
   fixes:
-  - "/home/runner/work/cablebot-build-and-test/cablebot-build-and-test/::"
+  - "/home/runner/work/plant-imager-build-and-test/plant-imager-build-and-test/::"
   
   require_ci_to_pass: no
 

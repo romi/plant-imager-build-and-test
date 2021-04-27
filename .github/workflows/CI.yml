@@ -36,25 +36,25 @@ jobs:
           sudo apt install socat
 
       - name: Create Build Environment & configure CMake
-        working-directory: ${{runner.workspace}}/cablebot-build-and-test
+        working-directory: ${{runner.workspace}}/plant-imager-build-and-test
         run: |
           mkdir build_tests
           cd build_tests
           cmake ..
           
       - name: Build
-        working-directory: ${{runner.workspace}}/cablebot-build-and-test
+        working-directory: ${{runner.workspace}}/plant-imager-build-and-test
         run: |
           cd build_tests
           make -j4
           
       - name: Test
-        working-directory: ${{runner.workspace}}/cablebot-build-and-test
+        working-directory: ${{runner.workspace}}/plant-imager-build-and-test
         run: |
           cd build_tests
           ctest -V
       
       - name: Upload coverage to Codecov
-        working-directory: ${{runner.workspace}}/cablebot-build-and-test
+        working-directory: ${{runner.workspace}}/plant-imager-build-and-test
         run: bash <(curl -s https://codecov.io/bash)
       
