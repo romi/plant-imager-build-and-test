@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(cablbot-build-and-test)
+project(plant-imager-build-and-test)
 
 if((CMAKE_SYSTEM_PROCESSOR MATCHES ".*arm") OR (CMAKE_SYSTEM_PROCESSOR MATCHES ".*aarch64"))
     MESSAGE("ARM PROCESSOR DETECTED")
@@ -124,6 +124,11 @@ include(${CMAKE_MODULES_DIRECTORY}/RomiProjectBuildOptions.cmake)
 add_subdirectory(libr)
 add_subdirectory(librcom)
 add_subdirectory(libromi)
+
+if((CMAKE_SYSTEM_PROCESSOR MATCHES ".*arm") OR (CMAKE_SYSTEM_PROCESSOR MATCHES ".*aarch64"))
+    link_directories(${PICAMERA_SHARED_LIB_DIR})
+endif()
+
 add_subdirectory(libplantimager)
 add_subdirectory(applications/example)
 

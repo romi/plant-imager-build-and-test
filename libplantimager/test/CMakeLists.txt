@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.10)
 
-set(CABLEBOT_SOURCES
+set(IMAGERSOURCES
         src/tests_main.cpp
         src/PlantImagerDemo_tests.cpp)
 
 add_executable( libplantimager_unit_tests
-                ${CABLEBOT_SOURCES})
+                ${IMAGERSOURCES})
 
 target_link_libraries( libplantimager_unit_tests
                         gtest
