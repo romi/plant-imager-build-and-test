@@ -106,5 +106,5 @@ if((CMAKE_SYSTEM_PROCESSOR MATCHES ".*arm") OR (CMAKE_SYSTEM_PROCESSOR MATCHES "
 endif()
 
 add_subdirectory(libplantimager)
-add_subdirectory(applications/example)
+add_subdirectory(applications)
 
